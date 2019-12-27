@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+ 	<groupId>com.api.central</groupId>
+	<artifactId>CentralAuditApi</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>war</packaging>
+
+	<name>CentralAuditApi</name>
+	<description>CentralAuditApi project for Vessel Audit</description>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.3.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	
+ 	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+	</properties>
+	
+  
+
+	<dependencies>
+		<dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0</version>
+        </dependency>
+        <dependency>
+		    <groupId>commons-lang</groupId>
+		    <artifactId>commons-lang</artifactId>
+		    <version>2.6</version>
+		</dependency>
+	<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/net.lingala.zip4j/zip4j -->
+<dependency>
+    <groupId>net.lingala.zip4j</groupId>
+    <artifactId>zip4j</artifactId>
+    <version>1.3.2</version>
+</dependency>	
+			
+		<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+		<dependency>
+		    <groupId>com.google.guava</groupId>
+		    <artifactId>guava</artifactId>
+		    <version>19.0</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+		</dependency>
+	<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-c3p0 -->
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-c3p0</artifactId>
+		    <version>5.0.11.Final</version>
+		</dependency>
+		 <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-pool2 -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-pool2</artifactId>
+		</dependency>
+		<!--FOR JASPER REPORTS -->
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+			<version>6.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports-fonts</artifactId>
+			<version>6.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.2</version>
+		</dependency>	
+			<!-- https://mvnrepository.com/artifact/redis.clients/jedis -->
+		<dependency>
+		    <groupId>redis.clients</groupId>
+		    <artifactId>jedis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>	
+		 <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency> 
+	    <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+		</dependency>
+ 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		 	<exclusions>
+            <exclusion>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-tomcat</artifactId>
+            </exclusion>
+			 </exclusions>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
+		<dependency>
+   		 <groupId>org.springframework</groupId>
+    		<artifactId>spring-context-support</artifactId>
+    		<!-- <version>3.2.0.RELEASE</version> -->
+		</dependency>
+		 <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-websocket</artifactId>
+        </dependency> 
+        <!-- websocket handshake in glassfish server -->
+         <!-- <dependency>
+			<groupId>org.glassfish.tyrus</groupId>
+			<artifactId>tyrus-client</artifactId>
+			<version>1.13.1</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.glassfish.tyrus</groupId>
+			<artifactId>tyrus-container-servlet</artifactId>
+			<version>1.13.1</version>
+		</dependency> -->
+		
+ 		<!-- Spring Security -->
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+ 		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+ 		</dependency>
+
+		<!-- Spring Security OAuth2-->
+		<dependency>
+		    <groupId>org.springframework.security.oauth</groupId>
+		    <artifactId>spring-security-oauth2</artifactId>
+ 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-aop</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/javax.annotation/jsr250-api -->
+		<dependency>
+		    <groupId>javax.annotation</groupId>
+		    <artifactId>jsr250-api</artifactId>
+		    <version>1.0</version>
+		</dependency>
+	<dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter</artifactId>
+	 </dependency>
+	 <dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-batch</artifactId>
+	</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+    		<groupId>commons-codec</groupId>
+    		<artifactId>commons-codec</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt -->
+			<dependency>
+			    <groupId>io.jsonwebtoken</groupId>
+			    <artifactId>jjwt</artifactId>
+			    <version>0.6.0</version>
+			</dependency>
+		
+	</dependencies>
+	<build>
+ 
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			
+			
+			<plugin>
+				<groupId>org.glassfish.maven.plugin</groupId>
+                <artifactId>maven-glassfish-plugin</artifactId>
+                <version>2.1</version>
+					<configuration>
+					  <glassfishDirectory>${local.glassfish.home}</glassfishDirectory>
+					  <user>${local.glassfish.user}</user>
+					  <passwordFile>${local.glassfish.home}/domains/${project.artifactId}/master-password</passwordFile>
+					   
+					  <domain>
+						<name>${project.artifactId}</name>
+						<httpPort>8080</httpPort>
+						<adminPort>4848</adminPort> <!-- [ERROR] CLI136 Port 0 should be a numeric value. -->
+					  </domain>
+					  <components>
+						<component>
+						  <name>${project.artifactId}</name>
+						  <!--artifact>${project.build.directory}/${project.build.finalName}.war</artifact-->
+						  <artifact>${project.build.directory}/${project.build.finalName}</artifact>
+						</component>
+					  </components>
+					  <debug>true</debug>
+                    <terse>false</terse>
+                    <echo>true</echo>
+					</configuration>
+			</plugin>
+			
+			
+		</plugins>
+		
+		 
+	</build>
+</project> 

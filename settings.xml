@@ -1,0 +1,24 @@
+ <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                          https://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <profiles>
+    <profile>
+      <id>glassfish-context</id>
+      <properties>
+        <local.glassfish.home>D:\\IRI\\setup\\glassfish-4.1.2\\glassfish4</local.glassfish.home>
+        <local.glassfish.user>admin</local.glassfish.user>
+        <local.glassfish.domain>CentralAuditApi</local.glassfish.domain>
+        <local.glassfish.passfile>
+        ${local.glassfish.home}\\glassfish\\domains\\${local.glassfish.domain}\\master-password
+        </local.glassfish.passfile>
+		<local.glassfish.username>dileep</local.glassfish.username>
+		<local.glassfish.password>Bsol@123</local.glassfish.password>
+      </properties>
+    </profile>
+  </profiles>
+ 
+  <activeProfiles>
+    <activeProfile>glassfish-context</activeProfile>
+  </activeProfiles>
+</settings>
